@@ -1,0 +1,54 @@
+<div class="editContainer">
+  <h2>Edycja rekordu</h2>
+
+<form [formGroup]="parcelEdit">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Numer działki" formControlName= "parcelID">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Województwo" formControlName= "province">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Powiat" formControlName= "countie">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Gmina" formControlName= "commune">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Powierzchnia" formControlName= "surface">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Udział" formControlName= "share">
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <button mat-raised-button (click)="onSubmit()"> Edytuj </button>
+      </div>
+      <div class="col-md-6">
+        <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
+      </div>
+    </div>
+</form>
+</div>
+
+

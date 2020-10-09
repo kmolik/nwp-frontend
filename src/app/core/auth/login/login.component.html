@@ -1,0 +1,27 @@
+<div class="logSrceen">
+  <img mat-card-image class="logo" src="assets/logo.gif">
+  <h1>Województwo Zachodniopomorskie</h1>
+  <h3>Mienie Skarbu Państwa</h3>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="login-container">
+      <h2>Logowanie</h2>
+      <div class="row">
+          <div class="col-md-12 form-group">
+              <input type="text" class="form-control" placeholder="login" formControlName="username">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 form-group">
+              <input type="password" placeholder="hasło" class="form-control" formControlName="password">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 form-group">
+              <input type="submit" class="btn btn-block btn-login" placeholder="Zaloguj">
+          </div>
+      </div>
+  </div>
+  </form>
+</div>

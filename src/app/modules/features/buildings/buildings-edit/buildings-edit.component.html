@@ -1,0 +1,66 @@
+<div class="editContainer">
+  <h2>Edycja rekordu</h2>
+
+<form [formGroup]="buildingEdit">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Id budynku" formControlName="buildingID">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Typ budynku" formControlName="buildingType">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Rok budowy" formControlName="buildYear">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Rok budowy" formControlName="buildYear">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Numer działki" formControlName="parcelNumber">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Województwo" formControlName="province">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Powiat" formControlName="countie">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Gmina" formControlName="commune">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <button mat-raised-button (click)="onSubmit()"> Edytuj </button>
+      </div>
+      <div class="col-md-6">
+        <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+

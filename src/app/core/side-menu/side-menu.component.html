@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <button mat-raised-button routerLink="/economy/dashboard/tableDashboard" routerLinkActive="active"> Wróć do strony głównej </button>
+
+      <mat-drawer-container class="example-container" autosize style="position: absolute">
+        <mat-drawer mode="side" opened>
+          <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+            <!-- This is the tree node template for leaf nodes -->
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding matTreeNodePaddingIndent="5">
+              <!-- use a disabled button to provide padding for tree leaf -->
+              <button mat-icon-button disabled></button>
+              <button mat-button (click)="goTo(node.path)">{{node.name}}</button>
+            </mat-tree-node>
+              <!-- This is the tree node template for expandable nodes -->
+            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodePaddingIndent="15">
+              <button mat-icon-button matTreeNodeToggle
+                      [attr.aria-label]="'toggle ' + node.name" >
+                <mat-icon class="mat-icon-rtl-mirror">
+                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                </mat-icon>
+              </button>
+              {{node.name}}
+            </mat-tree-node>
+          </mat-tree>
+        </mat-drawer>
+
+        <mat-drawer-content>
+          <router-outlet></router-outlet>
+        </mat-drawer-content>
+
+      </mat-drawer-container>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,34 @@
+export interface Parcel {
+    id: number;
+    data_aktualizacji: string;
+    numer_dzialki: string;
+    id_gus_rej_stat: string;
+    wojewodztwo: string;
+    powiat: string;
+    gmina: string;
+    adres: string;
+    obreb: number;
+    powierzchnia: string;
+    udzial: string;
+    wartosc: string;
+    data_wyceny: string;
+    numer_kw: string;
+    wlasciciel: string;
+    podstawa_nabycia_prawa_wlasnosci: string;
+    forma_wladania: string;
+    data_uplywu_wladania: string;
+    rodzaj_uzytkowania: string;
+    obecne_wykorzystanie: string;
+    zapisy_hipoteczne: string;
+    ciezary_i_ograniczenia: string;
+    wpis_do_rejestru_zabytkow: string;
+    formy_ochrony_przyrody: string;
+    oplaty_roczne: string;
+    roczny_podatek_od_nieruchomosci: string;
+    data_utworzenia: string;
+    data_weryfikacji: string;
+    uwagi: string;
+    x_id_jedn: string;
+    podstawa_aktualizacji: string;
+    przekazywanie: string;
+}
